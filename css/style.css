@@ -1,0 +1,1485 @@
+:root {
+    /* Ավելի տաք, պրեմիում և հաճելի բնական երանգներ */
+    --tesq-serm-bg: #FAF7F2;
+    --tesq-text: #1F2421;
+    --tesq-dark: #2F3E35;
+    --tesq-green: #4E6B56;
+    --tesq-light-bg: #F3EFEA;
+    --tesq-promo-bg: #EBE5DC;
+    --tesq-border: #DFD9CE;
+    --tesq-white: #FFFFFF;
+    --tesq-red: #D9384E;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    background: var(--tesq-serm-bg);
+    color: var(--tesq-text);
+    font-family: 'Montserrat', sans-serif; /* Հիմնական տեքստերը Montserrat-ով */
+    overflow-x: hidden;
+}
+
+/* Բոլոր գլխավոր վերնագրերը ստանում են պրեմիում Cormorant Garamond տառատեսակ */
+h1, h2, h3, 
+.banner-texter h1, 
+.bazhinner-header-ser h2, 
+.promo-texter h2, 
+.footer-bazhanord-qayl h3 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--tesq-green);
+    outline-offset: 4px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.glxavor-konteyner {
+    width: 100%;
+    min-height: 100vh;
+    background: var(--tesq-serm-bg);
+}
+
+/* Վերին տեղեկատվական գոտի */
+
+.verevi-shert {
+    width: 100%;
+    padding: 10px 20px;
+    background: var(--tesq-dark);
+    color: var(--tesq-white);
+    font-size: 11px;
+    letter-spacing: 0.5px;
+}
+
+.verevi-shert-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px 40px;
+}
+
+.verevi-shert-items span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.verevi-shert-items i {
+    color: #D9E2D4;
+}
+
+/* Գլխավոր վերնամաս */
+
+.glxavor-header-div {
+    position: relative;
+    z-index: 20;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    padding: 22px 5%;
+    background: var(--tesq-serm-bg);
+    border-bottom: 1px solid var(--tesq-border);
+}
+
+.logo-bolork {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo-ikonka {
+    color: var(--tesq-dark);
+    font-size: 25px;
+    transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.4s ease;
+}
+
+.logo-bolork:hover .logo-ikonka {
+    transform: rotate(-12deg) scale(1.15);
+    color: var(--tesq-green);
+}
+
+.logo-grutyun {
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    line-height: 1.2;
+}
+
+.logo-grutyun span {
+    display: block;
+    margin-top: 4px;
+    color: #777;
+    font-size: 9px;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+/* Մենյու */
+
+.glxavor-header-div nav {
+    min-width: 0;
+}
+
+.menyu-tsank {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+}
+
+.menyu-tsank li {
+    list-style: none;
+}
+
+.menyu-tsank a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 0;
+    color: #333;
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.menyu-tsank a::after {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+    left: 0;
+    height: 1.5px;
+    background: var(--tesq-dark);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.menyu-tsank a:hover {
+    color: var(--tesq-green);
+}
+
+.menyu-tsank a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Սլաքներ */
+
+.dropdown-slaq {
+    display: inline-block !important;
+    flex-shrink: 0;
+    color: #666;
+    font-size: 10px;
+    line-height: 1;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: rotate(0deg);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+}
+
+.dropdown-menyu:hover .dropdown-slaq,
+.dropdown-menyu:focus-within .dropdown-slaq {
+    color: var(--tesq-green);
+    transform: rotate(180deg);
+}
+
+/* Վերնամասի գործողությունների իկոնկաներ */
+
+.aknark-ish {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    gap: 17px;
+    color: #333;
+}
+
+.aknark-ish button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 30px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.aknark-ish i {
+    font-size: 17px;
+    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.aknark-ish button:hover i {
+    color: var(--tesq-green);
+    transform: translateY(-3px) scale(1.12);
+}
+
+.aknark-ish button:nth-child(3):hover i {
+    color: var(--tesq-red);
+}
+
+/* Գլխավոր բաններ */
+
+.glxavor-banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background: var(--tesq-light-bg);
+}
+
+.banner-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 480px;
+}
+
+.banner-texter {
+    position: relative;
+    z-index: 2;
+    width: 50%;
+    max-width: 610px;
+    padding: 60px 30px 60px 7%;
+}
+
+.banner-texter h1 {
+    margin-bottom: 20px;
+    color: var(--tesq-text);
+    font-family: Georgia, serif;
+    font-size: clamp(32px, 3.1vw, 46px);
+    font-weight: normal;
+    line-height: 1.16;
+    letter-spacing: -0.6px;
+}
+
+.banner-texter p {
+    max-width: 420px;
+    margin-bottom: 26px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.koxmaker-koxq {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.kosh-baton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    min-height: 44px;
+    padding: 12px 26px;
+    border: 1px solid var(--tesq-dark);
+    border-radius: 30px;
+    background: var(--tesq-dark);
+    color: var(--tesq-white);
+    font-size: 13px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.4s ease,
+                border-color 0.4s ease,
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kosh-baton:hover {
+    border-color: var(--tesq-green);
+    background: var(--tesq-green);
+    color: var(--tesq-white);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(78, 107, 86, 0.22);
+}
+
+.kosh-baton:active {
+    transform: translateY(-1px);
+}
+
+.button-arrow {
+    display: inline-block !important;
+    flex-shrink: 0;
+    font-size: 12px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kosh-baton:hover .button-arrow {
+    transform: translateX(5px);
+}
+
+.tesnel-video-baton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tesnel-video-baton > i {
+    color: var(--tesq-dark);
+    font-size: 19px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tesnel-video-baton:hover {
+    color: var(--tesq-green);
+}
+
+.tesnel-video-baton:hover > i {
+    transform: scale(1.15);
+}
+
+.banner-nkar-box {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    overflow: hidden;
+}
+
+.banner-nkar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.glxavor-banner:hover .banner-nkar {
+    transform: scale(1.05);
+}
+
+/* Առավելությունների գոտի */
+
+.hatkutyunner-shert {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 5%;
+    border-top: 1px solid var(--tesq-border);
+    border-bottom: 1px solid var(--tesq-border);
+    background: var(--tesq-white);
+}
+
+.hatkutyun-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #444;
+    font-size: 12px;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hatkutyun-item:hover {
+    transform: translateY(-3px);
+}
+
+.hatkutyun-item > i {
+    color: var(--tesq-green);
+    font-size: 21px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hatkutyun-item:hover > i {
+    transform: scale(1.15);
+}
+
+/* Բաժինների վերնագրեր */
+
+.bazhinner-section,
+.noruytner-section {
+    width: 100%;
+    padding: 44px 5%;
+    background: var(--tesq-serm-bg);
+}
+
+.bazhinner-header-ser {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 26px;
+}
+
+.bazhinner-header-ser h2 {
+    color: var(--tesq-text);
+    font-family: Georgia, serif;
+    font-size: clamp(23px, 2.2vw, 29px);
+    font-weight: normal;
+    line-height: 1.3;
+}
+
+.amen-tesnel {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #555;
+    font-size: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.amen-tesnel:hover {
+    color: var(--tesq-green);
+}
+
+.link-arrow {
+    display: inline-block !important;
+    font-size: 11px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.amen-tesnel:hover .link-arrow {
+    transform: translateX(5px);
+}
+
+/* Կատեգորիաների քարտեր */
+
+.kart-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+}
+
+.kart-item {
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    background: #F3EFE9;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.5s ease;
+}
+
+.kart-item:hover {
+    border-color: var(--tesq-border);
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(47, 62, 53, 0.1);
+}
+
+.kart-nkar-box {
+    width: 100%;
+    height: 220px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #E5E0D5;
+}
+
+.kart-nkar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.kart-item:hover .kart-nkar {
+    transform: scale(1.06);
+}
+
+.kart-text-tox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 3px 4px;
+    text-align: left;
+}
+
+.kategoria-slaq {
+    flex-shrink: 0;
+    color: #666;
+    font-size: 12px;
+    transition: color 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.kart-item:hover .kategoria-slaq {
+    color: var(--tesq-dark);
+    transform: translateX(5px);
+}
+
+/* Գովազդային բաններ */
+
+.promo-banner-wrapper {
+    width: 100%;
+    padding: 0 5% 10px;
+    background: var(--tesq-serm-bg);
+}
+
+.promo-banner {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    padding: 40px;
+    border-radius: 14px;
+    background: var(--tesq-promo-bg);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+}
+
+.promo-nkar-box {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 53%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.promo-nkar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.promo-banner:hover .promo-nkar {
+    transform: scale(1.05);
+}
+
+.promo-texter {
+    position: relative;
+    z-index: 2;
+    width: 55%;
+    max-width: 480px;
+}
+
+.promo-verevi-grutyun {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.promo-texter h2 {
+    margin: 12px 0 20px;
+    color: var(--tesq-text);
+    font-family: Georgia, serif;
+    font-size: clamp(26px, 3vw, 37px);
+    font-weight: normal;
+    line-height: 1.2;
+}
+
+.promo-kosh-baton {
+    margin-top: 2px;
+}
+
+/* Նորույթների քարտեր */
+
+.aprili-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    width: 100%;
+}
+
+.nor-kart-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #ECE7DE;
+    border-radius: 10px;
+    background: #F8F6F0;
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.5s ease;
+}
+
+.nor-kart-item:hover {
+    border-color: var(--tesq-border);
+    transform: translateY(-8px);
+    box-shadow: 0 22px 44px rgba(47, 62, 53, 0.1);
+}
+
+.sirt-ikonka {
+    position: absolute;
+    z-index: 3;
+    top: 18px;
+    right: 18px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #777;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sirt-ikonka:hover,
+.sirt-ikonka:focus-visible {
+    background: #FFF;
+    color: var(--tesq-red);
+    transform: scale(1.15) rotate(6deg);
+}
+
+.sirt-ikonka.aktiv,
+.sirt-ikonka[aria-pressed="true"] {
+    color: var(--tesq-red);
+}
+
+.nor-nkar-box {
+    width: 100%;
+    height: 210px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #EAE5DC;
+}
+
+.nor-nkar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.nor-kart-item:hover .nor-nkar {
+    transform: scale(1.06);
+}
+
+.aprili-anun {
+    min-height: 34px;
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.aprili-gn {
+    margin-bottom: 12px;
+    color: var(--tesq-dark);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.gnel-baton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    min-height: 39px;
+    margin-top: auto;
+    padding: 10px;
+    border-radius: 6px;
+    background: var(--tesq-dark);
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.gnel-baton:hover {
+    background: var(--tesq-green);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(78, 107, 86, 0.22);
+}
+
+/* Նորույթների ցուցիչներ */
+
+.keter-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 25px;
+}
+
+.ket {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 10px;
+    background: #CCC;
+    cursor: pointer;
+    transition: width 0.5s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;
+}
+
+.ket.aktiv {
+    width: 26px;
+    background: var(--tesq-dark);
+}
+
+/* Ստորին առավելությունների գոտի */
+
+.nerqev-hatkutyunner-shert {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    width: 100%;
+    padding: 28px 5%;
+    border-top: 1px solid var(--tesq-border);
+    border-bottom: 1px solid var(--tesq-border);
+    background: var(--tesq-light-bg);
+}
+
+.nerqev-hatkutyun-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nerqev-hatkutyun-item > i {
+    color: var(--tesq-green);
+    font-size: 23px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nerqev-hatkutyun-item:hover > i {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.nerqev-hatkutyun-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    color: #555;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.nerqev-hatkutyun-item strong {
+    color: var(--tesq-dark);
+}
+
+/* Footer */
+
+.glxavor-footer {
+    width: 100%;
+    padding: 44px 5% 25px;
+    border-top: 1px solid var(--tesq-border);
+    background: var(--tesq-light-bg);
+}
+
+.footer-verin-mas {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 38px;
+}
+
+.footer-bazhanord-qayl {
+    flex: 1;
+    max-width: 360px;
+}
+
+.footer-bazhanord-qayl h3 {
+    margin-bottom: 17px;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+.footer-input-tox {
+    display: flex;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.footer-input {
+    flex: 1;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #CCC6B9;
+    border-right: 0;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    background: white;
+    font-size: 12px;
+    transition: border-color 0.3s ease;
+}
+
+.footer-input:focus {
+    border-color: var(--tesq-green);
+}
+
+.footer-uxarkel-baton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 48px;
+    padding: 0 15px;
+    border: 1px solid var(--tesq-dark);
+    border-radius: 0 6px 6px 0;
+    background: var(--tesq-dark);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.footer-uxarkel-baton:hover {
+    background: var(--tesq-green);
+}
+
+.footer-qaghaqakanutyun-text {
+    color: #777;
+    font-size: 10px;
+    line-height: 1.7;
+}
+
+.footer-qaghaqakanutyun-text a {
+    color: var(--tesq-dark);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.footer-syuner {
+    display: flex;
+    justify-content: space-between;
+    flex: 1.5;
+    gap: 30px;
+}
+
+.footer-syun {
+    min-width: 0;
+}
+
+.footer-syun-vernagir {
+    margin-bottom: 14px;
+    color: var(--tesq-dark);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.footer-syun-tsank {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+}
+
+.footer-syun-tsank a {
+    color: #666;
+    font-size: 11px;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-syun-tsank a:hover {
+    color: var(--tesq-green);
+    transform: translateX(4px);
+}
+
+.footer-kap-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    margin-bottom: 11px;
+    color: #666;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.footer-kap-info i {
+    flex-shrink: 0;
+    color: var(--tesq-green);
+}
+
+.footer-social-icons {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-top: 17px;
+}
+
+.footer-social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #DAD6CC;
+    border-radius: 50%;
+    color: var(--tesq-dark);
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+                color 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer-social-icons a:hover {
+    transform: translateY(-4px) scale(1.12);
+    border-color: var(--tesq-dark);
+    background: var(--tesq-dark);
+    color: white;
+}
+
+/* Ամենաստորին գոտի */
+
+.footer-stori-mas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 20px;
+    border-top: 1px solid var(--tesq-border);
+    color: #777;
+    font-size: 10px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #777;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--tesq-dark);
+}
+
+.lang-select {
+    padding: 9px 15px;
+    border: 1px solid var(--tesq-border);
+    border-radius: 20px;
+    outline: none;
+    background: var(--tesq-dark);
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.lang-select:hover {
+    background: var(--tesq-green);
+}
+
+/* Սահուն անիմացիա էջը բացելիս */
+
+@media (prefers-reduced-motion: no-preference) {
+    .banner-texter {
+        animation: texter-appears 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    @keyframes texter-appears {
+        from {
+            opacity: 0;
+            transform: translateY(18px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Միջին էկրաններ և պատասխանատու (Responsive) ոճեր */
+
+@media (max-width: 1100px) {
+    .glxavor-header-div {
+        gap: 18px;
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .menyu-tsank {
+        gap: 15px;
+    }
+
+    .menyu-tsank a {
+        font-size: 12px;
+    }
+
+    .logo-grutyun {
+        font-size: 21px;
+    }
+
+    .aknark-ish {
+        gap: 12px;
+    }
+
+    .kart-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .kart-nkar-box {
+        height: 230px;
+    }
+
+    .footer-verin-mas {
+        gap: 25px;
+    }
+
+    .footer-syuner {
+        gap: 22px;
+    }
+}
+
+@media (max-width: 850px) {
+    .glxavor-header-div {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .glxavor-header-div nav {
+        order: 3;
+        width: 100%;
+    }
+
+    .menyu-tsank {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+    }
+
+    .aknark-ish {
+        margin-left: auto;
+    }
+
+    .banner-inner {
+        min-height: 420px;
+    }
+
+    .banner-texter {
+        width: 55%;
+        padding-left: 5%;
+    }
+
+    .banner-texter h1 {
+        font-size: 35px;
+    }
+
+    .banner-nkar-box {
+        width: 53%;
+    }
+
+    .promo-banner {
+        min-height: 270px;
+        padding: 30px;
+    }
+
+    .promo-nkar-box {
+        width: 50%;
+    }
+
+    .promo-texter {
+        width: 58%;
+    }
+
+    .aprili-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .footer-verin-mas {
+        flex-direction: column;
+    }
+
+    .footer-bazhanord-qayl {
+        max-width: 480px;
+        width: 100%;
+    }
+
+    .footer-syuner {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .verevi-shert {
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+
+    .verevi-shert-items {
+        gap: 7px;
+    }
+
+    .verevi-shert-items span {
+        text-align: center;
+    }
+
+    .glxavor-header-div {
+        gap: 14px;
+        padding: 16px 5%;
+    }
+
+    .logo-grutyun {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .logo-grutyun span {
+        font-size: 8px;
+        letter-spacing: 4px;
+    }
+
+    .logo-ikonka {
+        font-size: 22px;
+    }
+
+    .aknark-ish {
+        gap: 10px;
+    }
+
+    .aknark-ish button {
+        width: 23px;
+    }
+
+    .aknark-ish i {
+        font-size: 16px;
+    }
+
+    .menyu-tsank {
+        justify-content: flex-start;
+        gap: 8px 17px;
+    }
+
+    .menyu-tsank a {
+        font-size: 12px;
+    }
+
+    .banner-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .banner-texter {
+        order: 2;
+        width: 100%;
+        max-width: none;
+        padding: 30px 6% 35px;
+    }
+
+    .banner-texter h1 {
+        font-size: 34px;
+    }
+
+    .banner-texter p {
+        font-size: 13px;
+    }
+
+    .banner-nkar-box {
+        position: relative;
+        order: 1;
+        width: 100%;
+        height: 280px;
+    }
+
+    .banner-nkar {
+        object-position: center;
+    }
+
+    .koxmaker-koxq {
+        gap: 8px;
+    }
+
+    .kosh-baton {
+        padding: 12px 18px;
+        font-size: 12px;
+    }
+
+    .tesnel-video-baton {
+        padding: 9px 2px;
+        font-size: 11px;
+    }
+
+    .hatkutyunner-shert {
+        justify-content: flex-start;
+        gap: 18px;
+        padding: 20px 6%;
+    }
+
+    .hatkutyun-item {
+        width: calc(50% - 10px);
+        align-items: flex-start;
+        gap: 9px;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .hatkutyun-item > i {
+        flex-shrink: 0;
+        font-size: 18px;
+    }
+
+    .bazhinner-section,
+    .noruytner-section {
+        padding: 32px 5%;
+    }
+
+    .bazhinner-header-ser {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .bazhinner-header-ser h2 {
+        font-size: 24px;
+    }
+
+    .amen-tesnel {
+        font-size: 11px;
+    }
+
+    .kart-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .kart-item {
+        padding: 7px;
+    }
+
+    .kart-nkar-box {
+        height: 175px;
+    }
+
+    .promo-banner-wrapper {
+        padding: 0 5% 10px;
+    }
+
+    .promo-banner {
+        align-items: flex-start;
+        min-height: 390px;
+        padding: 25px 22px;
+    }
+
+    .promo-texter {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .promo-texter h2 {
+        max-width: 290px;
+        font-size: 29px;
+    }
+
+    .promo-nkar-box {
+        top: auto;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 48%;
+    }
+
+    .promo-nkar {
+        object-position: center;
+    }
+
+    .aprili-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .nor-kart-item {
+        padding: 8px;
+    }
+
+    .nor-nkar-box {
+        height: 175px;
+    }
+
+    .sirt-ikonka {
+        top: 13px;
+        right: 13px;
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    .aprili-anun {
+        font-size: 11px;
+    }
+
+    .aprili-gn {
+        font-size: 14px;
+    }
+
+    .nerqev-hatkutyunner-shert {
+        justify-content: flex-start;
+        gap: 22px 12px;
+        padding: 23px 6%;
+    }
+
+    .nerqev-hatkutyun-item {
+        width: calc(50% - 6px);
+        gap: 9px;
+    }
+
+    .nerqev-hatkutyun-item > i {
+        font-size: 20px;
+    }
+
+    .nerqev-hatkutyun-item div {
+        font-size: 10px;
+    }
+
+    .glxavor-footer {
+        padding: 32px 5% 22px;
+    }
+
+    .footer-syuner {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+
+    .footer-syun:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .footer-stori-mas {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-grutyun {
+        font-size: 17px;
+    }
+
+    .aknark-ish {
+        gap: 6px;
+    }
+
+    .menyu-tsank {
+        gap: 7px 13px;
+    }
+
+    .menyu-tsank a {
+        font-size: 11px;
+    }
+
+    .banner-texter h1 {
+        font-size: 29px;
+    }
+
+    .banner-nkar-box {
+        height: 230px;
+    }
+
+    .kart-nkar-box,
+    .nor-nkar-box {
+        height: 145px;
+    }
+
+    .promo-banner {
+        min-height: 365px;
+        padding: 22px 17px;
+    }
+
+    .promo-texter h2 {
+        font-size: 26px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

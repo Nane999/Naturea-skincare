@@ -1,0 +1,100 @@
+{
+    "categories": [
+        {
+            "id": "cleansing",
+            "image": "cleansing.avif",
+            "name": {
+                "ru": "Очищение",
+                "hy": "Մաքրում",
+                "en": "Cleansing"
+            }
+        },
+        {
+            "id": "serums",
+            "image": "serums.jpg",
+            "name": {
+                "ru": "Сыворотки",
+                "hy": "Շիճուկներ",
+                "en": "Serums"
+            }
+        },
+        {
+            "id": "moisturizing",
+            "image": "moisturizing.webp",
+            "name": {
+                "ru": "Увлажнение",
+                "hy": "Խոնավեցում",
+                "en": "Moisturizing"
+            }
+        },
+        {
+            "id": "sun",
+            "image": "sun-protection.jfif",
+            "name": {
+                "ru": "Защита от солнца",
+                "hy": "Արևային պաշտպանություն",
+                "en": "Sun Protection"
+            }
+        },
+        {
+            "id": "sets",
+            "image": "sets.jpeg",
+            "name": {
+                "ru": "Наборы",
+                "hy": "Հավաքածուներ",
+                "en": "Sets"
+            }
+        },
+        {
+            "id": "bestsellers",
+            "image": "bestsellers.jpg",
+            "name": {
+                "ru": "Бестселлеры",
+                "hy": "Բեսթսելերներ",
+                "en": "Bestsellers"
+            }
+        }
+    ],
+    "arrivals": [
+        {
+            "id": 1,
+            "image": "gel.jfif",
+            "title": {
+                "ru": "Мягкий гель для умывания с зелёным чаем",
+                "hy": "Լվացման փափուկ գել կանաչ թեյով",
+                "en": "Gentle green tea cleansing gel"
+            },
+            "price": "890 ₽"
+        },
+        {
+            "id": 2,
+            "image": "serum-c.webp",
+            "title": {
+                "ru": "Сыворотка для сияния кожи с витамином С",
+                "hy": "Մաշկի փայլի շիճուկ վիտամին C-ով",
+                "en": "Vitamin C skin radiance serum"
+            },
+            "price": "1 490 ₽"
+        },
+        {
+            "id": 3,
+            "image": "cream.png",
+            "title": {
+                "ru": "Лёгкий увлажняющий крем с скваланом",
+                "hy": "Թեթև խոնավեցնող կրեմ սկվալանով",
+                "en": "Light moisturizing cream with squalane"
+            },
+            "price": "1 190 ₽"
+        },
+        {
+            "id": 4,
+            "image": "lip-balm.jpg",
+            "title": {
+                "ru": "Бальзам для губ SPF 20 с оттенком",
+                "hy": "Շրթներկ-բալզամ SPF 20 երանգով",
+                "en": "Tinted lip balm SPF 20"
+            },
+            "price": "590 ₽"
+        }
+    ]
+}
